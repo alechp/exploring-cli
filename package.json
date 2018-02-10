@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "babel-node inquirer.js",
-    "test": "./src/commander.js -V --peppers -P"
+    "test": "src/meow.js unicorns --rainbow"
   },
   "babel": {
     "presets": [
@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "commander": "^2.14.1",
-    "inquirer": "^5.1.0"
+    "inquirer": "^5.1.0",
+    "meow": "^4.0.0"
   }
 }

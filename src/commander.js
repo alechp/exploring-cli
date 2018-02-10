@@ -1,4 +1,7 @@
 #!/usr/bin/env node
+
+// "test": "./src/commander.js -V --peppers -P"
+
 const log = console.log;
 const commander = require("commander");
 
