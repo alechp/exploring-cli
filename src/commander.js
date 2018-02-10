@@ -1,21 +1,24 @@
+#!/usr/bin/env node
+const log = console.log;
 const commander = require("commander");
-function cmd() {
-  commander
-    .version("0.1.0")
-    .option("-p, --peppers", "Add peppers")
-    .option("-P, --pineapple", "Add pineapple")
-    .option("-b, --bbq-sauce", "Add bbq sauce")
-    .option(
-      "-c, --cheese [type]",
-      "Add the specified type of cheese [marble]",
-      "marble"
-    )
-    .parse(process.argv);
 
-  console.log("you ordered a pizza with:");
-  if (program.peppers) console.log("  - peppers");
-  if (program.pineapple) console.log("  - pineapple");
-  if (program.bbqSauce) console.log("  - bbq");
-  console.log("  - %s cheese", program.cheese);
-}
-module.exports = { cmd };
+log("foo");
+commander
+  .version("0.1.0")
+  .option("-p, --peppers", "Add peppers")
+  .option("-P, --pineapple", "Add pineapple")
+  .option("-b, --bbq-sauce", "Add bbq sauce")
+  .option(
+    "-c, --cheese [type]",
+    "Add the specified type of cheese [marble]",
+    "marble"
+  )
+  .parse(process.argv);
+
+log("you ordered a pizza with:");
+if (commander.peppers) log("  - peppers");
+if (commander.pineapple) log("  - pineapple");
+if (commander.bbqSauce) log("  - bbq");
+log("  - %s cheese", commander.cheese);
+
+log(`hi`);

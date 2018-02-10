@@ -1,7 +1,5 @@
-const inquirer = require("inquirer");
-const log = console.log;
-
-function inq() {
+(function inq() {
+  const inquirer = require("inquirer");
   let stdChoices = ["A", "B", "C", "D", "E"];
   let prompt = inquirer.createPromptModule();
   let questions = [
@@ -47,8 +45,4 @@ function inq() {
   prompt(questions)
     .then(answers => log(`answers: ${JSON.stringify(answers, null, 2)}`))
     .catch(err => err);
-}
-
-module.exports = {
-  inq
-};
+})();
